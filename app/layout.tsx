@@ -1,22 +1,21 @@
 import type { Metadata } from 'next'
-import { Rubik } from 'next/font/google'
 import './globals.css'
-
-const rubik = Rubik({ subsets: ['hebrew', 'latin'] })
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'מדריכים | AP Automations',
-  description: 'מדריכים מקצועיים לאוטומציה ו-CRM',
+  title: 'AP Learn — מדריכי AI לעסקים',
+  description: 'מדריכים מעשיים לכלי AI — בחינם, בעברית, לבעלי עסקים',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="he" dir="rtl" className={rubik.className}>
-      <body>{children}</body>
+    <html lang="he" dir="rtl">
+      <body className="bg-base text-white min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   )
 }

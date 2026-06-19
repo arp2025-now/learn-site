@@ -4,6 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllGuides, getGuideBySlug } from '@/lib/guides'
 import { mdxComponents } from '@/components/mdx'
 import GuideCard from '@/components/GuideCard'
+import ToolIcon from '@/components/ToolIcon'
 import { toolColors } from '@/lib/toolColors'
 
 export async function generateStaticParams() {
@@ -36,11 +37,14 @@ export default async function GuidePage({ params }: { params: { slug: string } }
 
       {/* Header */}
       <header className="mb-10">
-        <div className="flex items-center gap-3 mb-4">
-          <span className={`text-xs font-medium px-3 py-1 rounded-full border ${badgeClass}`}>
-            {meta.tool}
-          </span>
-          <span className="text-muted/60 text-xs">{meta.readTime} קריאה</span>
+        <div className="flex items-center gap-4 mb-6">
+          <ToolIcon tool={meta.tool} toolColor={meta.toolColor} size="lg" />
+          <div>
+            <span className={`text-xs font-medium px-3 py-1 rounded-full border ${badgeClass}`}>
+              {meta.tool}
+            </span>
+            <div className="text-muted/60 text-xs mt-1">{meta.readTime} קריאה</div>
+          </div>
         </div>
         <h1 className="text-3xl font-bold text-white leading-tight mb-4">
           {meta.title}

@@ -1,15 +1,10 @@
+import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { getAllGuides, getGuideBySlug } from '@/lib/guides'
 import { mdxComponents } from '@/components/mdx'
 import GuideCard from '@/components/GuideCard'
-
-const toolColors: Record<string, string> = {
-  cyan: 'text-cyan border-cyan/30 bg-cyan/10',
-  purple: 'text-purple border-purple/30 bg-purple/10',
-  gold: 'text-gold border-gold/30 bg-gold/10',
-  green: 'text-green border-green/30 bg-green/10',
-}
+import { toolColors } from '@/lib/toolColors'
 
 export async function generateStaticParams() {
   return getAllGuides().map(g => ({ slug: g.slug }))
@@ -20,7 +15,7 @@ export default async function GuidePage({ params }: { params: { slug: string } }
   try {
     guide = getGuideBySlug(params.slug)
   } catch {
-    notFound()
+    return notFound()
   }
 
   const { meta, content } = guide
@@ -32,9 +27,9 @@ export default async function GuidePage({ params }: { params: { slug: string } }
     <div className="max-w-3xl mx-auto px-6 py-16">
       {/* Breadcrumb */}
       <nav className="mb-8">
-        <a href="/" className="text-muted text-sm hover:text-white transition-colors">
+        <Link href="/" className="text-muted text-sm hover:text-white transition-colors">
           בית
-        </a>
+        </Link>
         <span className="text-muted/40 mx-2">←</span>
         <span className="text-muted/60 text-sm">{meta.tool}</span>
       </nav>

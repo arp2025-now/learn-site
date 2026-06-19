@@ -20,7 +20,7 @@ const config: Config = {
         muted: '#94a3b8',
       },
       fontFamily: {
-        sans: ['Rubik', 'sans-serif'],
+        sans: ['var(--font-rubik)', 'Rubik', 'sans-serif'],
       },
     },
   },

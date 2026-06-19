@@ -1,14 +1,30 @@
 import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './content/**/*.mdx',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        base: '#0f0e22',
+        card: '#1a1830',
+        'card-border': '#2d2b50',
+        cyan: '#00d4a0',
+        gold: '#e8c84a',
+        purple: '#8b5cf6',
+        green: '#4ade80',
+        muted: '#94a3b8',
+      },
+      fontFamily: {
+        sans: ['Rubik', 'sans-serif'],
+      },
+    },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [typography],
 }
+
 export default config

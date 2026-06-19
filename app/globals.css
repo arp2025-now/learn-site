@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* Prose overrides for RTL guide content */
+.prose {
+  color: #94a3b8;
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: #ffffff;
+  font-family: 'Rubik', sans-serif;
+}
+
+.prose a {
+  color: #00d4a0;
+}
+
+.prose strong {
+  color: #ffffff;
+}
+
+.prose code {
+  color: #00d4a0;
+  background: #1a1830;
+  padding: 0.1em 0.3em;
+  border-radius: 0.25rem;
+}
+
+.prose pre {
+  background: #1a1830;
+  border: 1px solid #2d2b50;
+}

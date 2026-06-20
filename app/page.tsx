@@ -12,7 +12,7 @@ export default function HomePage() {
           • מדריכים חינמיים
         </span>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">
-          למדי להשתמש ב-AI{' '}
+          למדו להשתמש ב-AI{' '}
           <span className="text-cyan">בעסק שלך</span>
         </h1>
         <p className="text-muted text-lg max-w-xl mx-auto">

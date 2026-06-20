@@ -22,7 +22,6 @@ tier: "paid"
 ב-Make, צרו Scenario חדש (לחצו על **"Create a new scenario"**). הגדירו את ה-Trigger — למשל Gmail: "Watch Emails" כדי לתפוס מיילים נכנסים.
 </Step>
 
-<Screenshot src="/screenshots/make-ai-module/step1-new-scenario.png" alt="יצירת Scenario חדש ב-Make" caption="הגדירו trigger — כל אימות שמגיע מייל, הדשא מתחיל לפעול" />
 
 <Step number={2}>
 הוסיפו מודול חדש — לחצו על **+** אחרי ה-Trigger וחפשו **"Claude AI"** או **"OpenAI"**. בחרו את השירות שיש לכם API Key אליו.
@@ -30,7 +29,6 @@ tier: "paid"
 למבתחילים — **Claude AI** (ב-Make) קל יותר להגדרה.
 </Step>
 
-<Screenshot src="/screenshots/make-ai-module/step2-add-ai-module.png" alt="הוספת מודול AI ב-Make" caption="חפשו Claude AI או OpenAI בתיבת החיפוש של המודולים" />
 
 <Step number={3}>
 הגדירו את ה-Prompt של ה-AI. זה הלב של האוטומציה. לדוגמה:
@@ -53,7 +51,6 @@ tier: "paid"
 שימו לב ל-`{{1.subject}}` — Make ממלא שם אוטומטית את ערכי המייל.
 </Step>
 
-<Screenshot src="/screenshots/make-ai-module/step3-ai-prompt.png" alt="הגדרת ה-Prompt למודול AI" caption="כתבו Prompt ברור עם הוראות והשדות שרוצים שה-AI ימלא" />
 
 <Step number={4}>
 אחרי מודול ה-AI, הוסיפו **Router** — מחלק שמפנה לנתיבים שונים לפי התשובה:
@@ -65,7 +62,6 @@ tier: "paid"
 ב-Make מגדירים זאת ב-**Filters** על כל נתיב של ה-Router.
 </Step>
 
-<Screenshot src="/screenshots/make-ai-module/step4-router.png" alt="Router עם נתיבים לפי תשובת AI" caption="כל נתיב ב-Router מגיב לסיווג שונה של ה-AI" />
 
 <Tip>
 בקשו מה-AI תמיד להחזיר **JSON בלבד** — זה מקל על ה-Router לקרוא את התשובה. הוסיפו בסוף ה-Prompt: "אל תוסיפו הסברים — JSON בלבד."

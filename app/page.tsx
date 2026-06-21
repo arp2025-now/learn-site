@@ -13,7 +13,7 @@ export default function HomePage() {
         </span>
         <h1 className="text-4xl font-bold text-white mb-4 leading-tight">
           למדו להשתמש ב-AI{' '}
-          <span className="text-cyan">בעסק שלך</span>
+          <span className="text-cyan">בעסק</span>
         </h1>
         <p className="text-muted text-lg max-w-xl mx-auto">
           מדריכים מעשיים ופשוטים לכלי AI — NotebookLM, Claude, Gemini, Make ועוד.
